@@ -2,3 +2,12 @@ language: python
 python:
  - "2.7"
 script: tox -e py27
+
+sudo: true
+before_install:
+  - wget http://downloads.opennebula.org/packages/opennebula-4.10.2/Ubuntu-12.04/Ubuntu-12.04-opennebula-4.10.2-1.tar.gz
+  - tar -xzf Ubuntu-12.04-opennebula-4.10.2-1.tar.gz
+  - sudo dpkg -i opennebula-4.10.2-1/opennebula_4.10.2-1_amd64.deb opennebula-4.10.2-1/opennebula-common_4.10.2-1_all.deb 
+  - sudo apt-get install -f tox
+
+
