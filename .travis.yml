@@ -1,7 +1,7 @@
 language: python
 python:
  - "2.7"
-script: sudo -u oneadmin oneuser list
+script: sudo -u oneadmin ONE_AUTH=/var/lib/one/.one/one_auth oneuser list
 
 sudo: true
 before_install:
