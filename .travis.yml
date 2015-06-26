@@ -1,7 +1,7 @@
 language: python
 python:
  - "2.7"
-script: tox -e py27
+script: oneuser list
 
 sudo: true
 before_install:
@@ -9,5 +9,5 @@ before_install:
   - echo "deb http://downloads.opennebula.org/repo/4.12/Ubuntu/12.04/ stable opennebula" > /tmp/opennebula.list
   - sudo mv /tmp/opennebula.list /etc/apt/sources.list.d/opennebula.list
   - sudo apt-get update -qq
-  - sudo apt-get install -y opennebula tox
+  - sudo apt-get install -y opennebula opennebula-tools
 
