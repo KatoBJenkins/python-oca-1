@@ -1,7 +1,7 @@
 language: python
 python:
  - "2.7"
-script: oneuser list
+script: sudo -u oneadmin oneuser list
 
 sudo: true
 before_install:
